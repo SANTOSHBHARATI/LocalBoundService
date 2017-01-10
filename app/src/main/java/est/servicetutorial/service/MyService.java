@@ -29,6 +29,7 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(TAG,"onStartCommand");
+        Log.i(TAG,"Thread ID : "+Thread.currentThread().getId());
         isServiceStarted = true;
         new Thread(new Runnable() {
             @Override
@@ -62,9 +63,10 @@ public class MyService extends Service {
     private void startRandomNumberGenerator(){
         while (isServiceStarted){
             try {
-                Thread.sleep(100);
+                Thread.sleep(1000);
                 if(isServiceStarted)
                     randomNumber = new Random().nextInt(100);
+                    Log.i(TAG,"Thread ID : "+Thread.currentThread().getId()+" Random Number : "+randomNumber);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
