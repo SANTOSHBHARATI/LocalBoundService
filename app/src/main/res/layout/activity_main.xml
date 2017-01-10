@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="est.servicetutorial.activty.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:text="Hello World!" />
+
+    <Button
+        android:text="Start Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickStartService"
+        android:id="@+id/button1"
+         />
+    <Button
+        android:text="Stop Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickStopService"
+        android:id="@+id/button2"
+        />
+    <Button
+        android:text="Bind Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickBindService"
+        android:id="@+id/button3"
+        />
+    <Button
+        android:text="Unbind Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickUnbindService"
+        android:id="@+id/button4"
+        />
+    <Button
+        android:text="Get Random Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickRandom"
+        android:id="@+id/button"
+        />
+</LinearLayout>
